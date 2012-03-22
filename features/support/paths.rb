@@ -18,7 +18,9 @@ module NavigationHelpers
 
     when /^the edit page for "([^"]+)"$/
        edit_movie_path(Movie.find_by_title($1))
-# Add more mappings here.
+#    Add more mappings here.
+    when /^the details page for "([^"]+)"$/
+      movie_path(Movie.find_by_title($1))
     # Here is an example that pulls values out of the Regexp:
     #
     #   when /^(.*)'s profile page$/i
