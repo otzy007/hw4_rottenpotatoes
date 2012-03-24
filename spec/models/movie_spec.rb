@@ -1,4 +1,5 @@
-requier 'spec_helper'
+require 'spec_helper'
+
 
 describe Movie do
   describe "All rating for movies" do

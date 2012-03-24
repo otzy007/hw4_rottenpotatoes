@@ -16,6 +16,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails'
   gem 'simplecov'
+  gem 'factory_girl_rails', '1.6.0'
 end
 group :production do
   gem 'pg'
