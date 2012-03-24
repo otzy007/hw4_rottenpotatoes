@@ -14,14 +14,17 @@ module NavigationHelpers
     case page_name
 
     when /^the home\s?page$/
-      '/'
+      '/movies'
 
     when /^the edit page for "([^"]+)"$/
        edit_movie_path(Movie.find_by_title($1))
 #    Add more mappings here.
     when /^the details page for "([^"]+)"$/
       movie_path(Movie.find_by_title($1))
-    # Here is an example that pulls values out of the Regexp:
+    when /^the Similar Movies page for "([^"]+)"$/
+      similar_path(Movie.find_by_title($1))
+
+# Here is an example that pulls values out of the Regexp:
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
