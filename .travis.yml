@@ -5,7 +5,7 @@ rvm:
 gemfile: Gemfile
 env:
   - SUITE=cucumber
-  - SUITE=spec
+  - SUITE=rspec
 before_script:
   - export USE_BUNDLER=yes
   - rake db:drop
