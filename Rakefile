@@ -9,3 +9,10 @@ Rottenpotatoes::Application.load_tasks
 Rake::Task[:default].prerequisites.clear
 task :default => [:spec]
 
+task :travis do
+  ["rspec spec", "rake cucumber"].each do |cmd|
+    puts "Starting #{cmd} ..."
+    system("bundle exec ${cmd}")
+    raise "#{cmd} failed!" unless $?.exitstatus == 0
+  end
+end
