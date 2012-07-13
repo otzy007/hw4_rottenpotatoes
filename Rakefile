@@ -5,3 +5,7 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rottenpotatoes::Application.load_tasks
+
+Rake::Task[:default].prerequisites.clear
+task :default => [:spec]
+
